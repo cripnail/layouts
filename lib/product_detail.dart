@@ -22,34 +22,25 @@ class ProductDetail extends StatelessWidget {
             child: Column(
               children: [
                 const SizedBox(height: 24),
-                ListTile(
-                  leading: FittedBox(
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage(person
-                          .picture),
-                      radius: 30,// no matter how big it is, it won't overflow
-                    ),
-                  ),
-                  title: Text(
-                    person.title,
-                    style: const TextStyle(fontSize: 20),
-                  ),
-                  subtitle: Text(
-                    person.email,
-                    style: const TextStyle(fontSize: 14, color: Colors.grey),
-                  ),
+                Text(
+                  person.title,
+                  style: const TextStyle(fontSize: 20),
                 ),
-                // const SizedBox(
-                //   height: 16,
-                // ),
-                // Text(
-                //   person.department,
-                //   style: const TextStyle(fontSize: 16),
-                // ),
-                // Text(
-                //   person.jobTitle,
-                //   style: const TextStyle(fontSize: 20),
-                // ),
+                Text(
+                  person.email,
+                  style: const TextStyle(fontSize: 14, color: Colors.grey),
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  person.department,
+                  style: const TextStyle(fontSize: 16),
+                ),
+                Text(
+                  person.jobTitle,
+                  style: const TextStyle(fontSize: 20),
+                ),
               ],
             ),
           ),

@@ -18,6 +18,13 @@ class PersontList extends StatelessWidget {
             color:
             index == currentPerson ? Colors.lightBlueAccent : Colors.white,
             child: ListTile(
+              leading: FittedBox(
+                child: CircleAvatar(
+                  backgroundImage: AssetImage(person
+                      .picture),
+                  radius: 30,// no matter how big it is, it won't overflow
+                ),
+              ),
               title: Text(person.title),
               subtitle: Text(person.email),
               trailing: Text(person.grade.toString()),
