@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adaptive/products.dart';
+import 'package:responsive_adaptive/persons.dart';
 
-class PersontList extends StatelessWidget {
-  const PersontList(
+class SelectedPerson extends StatelessWidget {
+  const SelectedPerson(
       {Key? key, required this.currentPerson, required this.onPersonTap})
       : super(key: key);
   final int currentPerson;

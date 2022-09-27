@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:responsive_adaptive/product_detail.dart';
-import 'package:responsive_adaptive/product_list.dart';
-import 'package:responsive_adaptive/products.dart';
+import 'package:responsive_adaptive/person_detail.dart';
+import 'package:responsive_adaptive/person_list.dart';
+import 'package:responsive_adaptive/persons.dart';
 
 class WideLayout extends StatelessWidget {
   const WideLayout(
@@ -16,12 +16,12 @@ class WideLayout extends StatelessWidget {
       children: [
         Expanded(
           flex: 2,
-          child: PersontList(
+          child: PersonList(
               currentPerson: currentProduct, onPersonTap: onProductTap),
         ),
         Expanded(
           flex: 3,
-          child: ProductDetail(
+          child: PersonDetail(
             person: persons[currentProduct],
           ),
         ),

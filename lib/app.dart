@@ -30,7 +30,7 @@ class _AppState extends State<App> {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            title: const Text('My Restaurant'),
+            title: const Text('My Team Mates'),
           ),
           body:
           // LayoutBuilder(builder: (BuildContext context, constraints) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adaptive/product_detail.dart';
-import 'package:responsive_adaptive/product_list.dart';
-import 'package:responsive_adaptive/products.dart';
+import 'package:responsive_adaptive/person_detail.dart';
+import 'package:responsive_adaptive/person_list.dart';
+import 'package:responsive_adaptive/persons.dart';
 
 class NarrowLayout extends StatelessWidget {
   const NarrowLayout(
@@ -12,7 +12,7 @@ class NarrowLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PersontList(
+    return PersonList(
         currentPerson: currentPerson,
         onPersonTap: (index) {
           onPersonTap(index);
@@ -22,7 +22,7 @@ class NarrowLayout extends StatelessWidget {
                 appBar: AppBar(
                   title: Text(persons[index].title),
                 ),
-                body: ProductDetail(person: persons[index]),
+                body: PersonDetail(person: persons[index]),
               );
             }),
           );
