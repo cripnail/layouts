@@ -16,16 +16,16 @@ class NarrowLayout extends StatelessWidget {
         currentPerson: currentPerson,
         onPersonTap: (index) {
           onPersonTap(index);
-          Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) {
-              return Scaffold(
-                appBar: AppBar(
-                  title: Text(persons[index].title),
-                ),
-                body: PersonDetail(person: persons[index]),
-              );
-            }),
-          );
+          // Navigator.of(context).push(
+          //   MaterialPageRoute(builder: (context) {
+          //     return Scaffold(
+          //       appBar: AppBar(
+          //         title: Text(persons[index].title),
+          //       ),
+          //       body: PersonDetail(person: persons[index]),
+          //     );
+          //   }),
+          // );
         });
   }
 }

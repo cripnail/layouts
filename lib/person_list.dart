@@ -28,26 +28,32 @@ class PersonList extends StatelessWidget {
               subtitle: Text(person.email),
               trailing: Text(person.grade.toString()),
               onTap: () {
+                onPersonTap(index);
                 showModalBottomSheet(
                   context: context,
                   builder: (BuildContext context) {
-                    return Container(
-                      height: 200,
-                      color: Colors.white,
-                      child: Column(children: const <Widget>[
-                        ListTile(
-                          leading: Icon(Icons.person),
-                          title: Text('VIEW PROFILE'),
-                        ),
-                        ListTile(
-                          leading: Icon(Icons.people),
-                          title: Text('FRIENDS'),
-                        ),
-                        ListTile(
-                          leading: Icon(Icons.report),
-                          title: Text('REPORT'),
-                        ),
-                      ]),
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Container(
+                        height: 200,
+                        color: Colors.white,
+                        child: Column(children: const <Widget>[
+                          ListTile(
+                            leading: Icon(Icons.person),
+                            title: Text('VIEW PROFILE'),
+                          ),
+                          ListTile(
+                            leading: Icon(Icons.people),
+                            title: Text('FRIENDS'),
+                          ),
+                          ListTile(
+                            leading: Icon(Icons.report),
+                            title: Text('REPORT'),
+                          ),
+                        ]),
+                      ),
                     );
                   },
                 );

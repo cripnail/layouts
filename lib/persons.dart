@@ -32,7 +32,7 @@ final List<Person> persons = _persons
 final List<Map<String, dynamic>> _persons = [
   {
     "title": "Kalya Tucker",
-    "email": "kaylat@contoso.com",
+    "email": "kaylat@vdsgh.com",
     "picture": "assets/images/2.jpg",
     "grade": 5.6,
     "department": "Human Resources",
@@ -40,7 +40,7 @@ final List<Map<String, dynamic>> _persons = [
   },
   {
     "title": "Liz Reese",
-    "email": "liz@cgyuguy.com",
+    "email": "liz@cvduy.com",
     "picture": "assets/images/3.jpg",
     "grade": 6.0,
     "department": "PR",
@@ -48,7 +48,7 @@ final List<Map<String, dynamic>> _persons = [
   },
   {
     "title": "Marion Hail",
-    "email": "marion@cgyuguy.com",
+    "email": "marion@cgcsuy.com",
     "picture": "assets/images/4.jpg",
     "grade": 6.0,
     "department": "Finance",
@@ -56,7 +56,7 @@ final List<Map<String, dynamic>> _persons = [
   },
   {
     "title": "Valentine Bail",
-    "email": "vera@cgyuguy.com",
+    "email": "vera@dmhguy.com",
     "picture": "assets/images/5.jpg",
     "grade": 5.2,
     "department": "Finance",
@@ -64,7 +64,7 @@ final List<Map<String, dynamic>> _persons = [
   },
   {
     "title": "Rud Zol",
-    "email": "rud@cgyuguy.com",
+    "email": "rud@bfguy.com",
     "picture": "assets/images/1.jpg",
     "grade": 5.7,
     "department": "IT",
@@ -72,7 +72,7 @@ final List<Map<String, dynamic>> _persons = [
   },
   {
     "title": "Maria Dot",
-    "email": "maks@cgyuguy.com",
+    "email": "maks@uiyguy.com",
     "picture": "assets/images/6.jpg",
     "grade": 5.5,
     "department": "IT",

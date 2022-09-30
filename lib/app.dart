@@ -42,7 +42,7 @@ class _AppState extends State<App> {
           // }),
           AdaptiveWidget(
             wide: WideLayout(
-                currentProduct: _currentPerson, onProductTap: _onPersonTap),
+                currentPerson: _currentPerson, onPersonTap: _onPersonTap),
             narrow: NarrowLayout(
                 currentPerson: _currentPerson, onPersonTap: _onPersonTap),
           )),
