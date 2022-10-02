@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adaptive/person_detail.dart';
 import 'package:responsive_adaptive/person_list.dart';
-import 'package:responsive_adaptive/persons.dart';
 
 class NarrowLayout extends StatelessWidget {
   const NarrowLayout(

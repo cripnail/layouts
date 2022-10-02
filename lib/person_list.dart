@@ -80,7 +80,7 @@ class PersonList extends StatelessWidget {
                 mainAxisSpacing: 4.0,
                 crossAxisCount: 3,
               ),
-              itemBuilder: (BuildContext context, int index) {
+              itemBuilder: (BuildContext _, int index) {
                 final person = persons[index];
                 return Container(
                   color: index == currentPerson
@@ -102,6 +102,13 @@ class PersonList extends StatelessWidget {
                     onTap: () {
                       onPersonTap(index);
                       showPopover(
+                        onPop: () => print('Popover was popped!'),
+                        direction: PopoverDirection.bottom,
+                        width: 400,
+                        height: 200,
+                        arrowHeight: 15,
+                        arrowWidth: 30,
+                        transitionDuration: const Duration(milliseconds: 150),
                         context: context,
                         bodyBuilder: (BuildContext context) {
                           return GestureDetector(
