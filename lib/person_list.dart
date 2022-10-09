@@ -82,63 +82,66 @@ class PersonList extends StatelessWidget {
               ),
               itemBuilder: (BuildContext _, int index) {
                 final person = persons[index];
-                return Container(
-                  color: index == currentPerson
-                      ? Colors.lightBlueAccent
-                      : Colors.white,
-                  child: ListTile(
-                    title: CircleAvatar(
-                      backgroundImage: AssetImage(person.picture),
-                      radius:
-                      110, // no matter how big it is, it won't overflow
+
+                return Builder(builder: (BuildContext ctx) {
+                  return Container(
+                    color: index == currentPerson
+                        ? Colors.lightBlueAccent
+                        : Colors.white,
+                    child: ListTile(
+                      title: CircleAvatar(
+                        backgroundImage: AssetImage(person.picture),
+                        radius:
+                            110, // no matter how big it is, it won't overflow
+                      ),
+                      subtitle: Column(
+                        children: [
+                          Text(person.title),
+                          Text(person.email),
+                          Text(person.grade.toString()),
+                        ],
+                      ),
+                      onTap: () {
+                        onPersonTap(index);
+                        showPopover(
+                          onPop: () => print('Popover was popped!'),
+                          direction: PopoverDirection.bottom,
+                          width: 200,
+                          height: 150,
+                          arrowHeight: 15,
+                          arrowWidth: 30,
+                          transitionDuration: const Duration(milliseconds: 150),
+                          context: ctx,
+                          bodyBuilder: (BuildContext context) {
+                            return GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: Container(
+                                height: 200,
+                                color: Colors.white,
+                                child: Column(children: const <Widget>[
+                                  ListTile(
+                                    leading: Icon(Icons.person),
+                                    title: Text('VIEW PROFILE'),
+                                  ),
+                                  ListTile(
+                                    leading: Icon(Icons.people),
+                                    title: Text('FRIENDS'),
+                                  ),
+                                  ListTile(
+                                    leading: Icon(Icons.report),
+                                    title: Text('REPORT'),
+                                  ),
+                                ]),
+                              ),
+                            );
+                          },
+                        );
+                      },
                     ),
-                    subtitle: Column(
-                      children: [
-                        Text(person.title),
-                        Text(person.email),
-                        Text(person.grade.toString()),
-                      ],
-                    ),
-                    onTap: () {
-                      onPersonTap(index);
-                      showPopover(
-                        onPop: () => print('Popover was popped!'),
-                        direction: PopoverDirection.bottom,
-                        width: 400,
-                        height: 200,
-                        arrowHeight: 15,
-                        arrowWidth: 30,
-                        transitionDuration: const Duration(milliseconds: 150),
-                        context: context,
-                        bodyBuilder: (BuildContext context) {
-                          return GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).pop();
-                            },
-                            child: Container(
-                              height: 200,
-                              color: Colors.white,
-                              child: Column(children: const <Widget>[
-                                ListTile(
-                                  leading: Icon(Icons.person),
-                                  title: Text('VIEW PROFILE'),
-                                ),
-                                ListTile(
-                                  leading: Icon(Icons.people),
-                                  title: Text('FRIENDS'),
-                                ),
-                                ListTile(
-                                  leading: Icon(Icons.report),
-                                  title: Text('REPORT'),
-                                ),
-                              ]),
-                            ),
-                          );
-                        },
-                      );
-                    },
-                  ),
-                );
+                  );
+                });
               });
     });
   }

@@ -32,15 +32,7 @@ class _AppState extends State<App> {
           appBar: AppBar(
             title: const Text('My Team Mates'),
           ),
-          body:
-          // LayoutBuilder(builder: (BuildContext context, constraints) {
-          //   return constraints.maxWidth > 600
-          //       ? WideLayout(
-          //           currentProduct: _currentProduct, onProductTap: _onProductTap)
-          //       : NarrowLayout(
-          //           currentProduct: _currentProduct, onProductTap: _onProductTap);
-          // }),
-          AdaptiveWidget(
+          body: AdaptiveWidget(
             wide: WideLayout(
                 currentPerson: _currentPerson, onPersonTap: _onPersonTap),
             narrow: NarrowLayout(

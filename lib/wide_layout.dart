@@ -17,12 +17,6 @@ class WideLayout extends StatelessWidget {
           child: PersonList(
               currentPerson: currentPerson, onPersonTap: onPersonTap),
         ),
-        // Expanded(
-        //   flex: 3,
-        //   child: PersonDetail(
-        //     person: persons[currentPerson],
-        //   ),
-        // ),
       ],
     );
   }
